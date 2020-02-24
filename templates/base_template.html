@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="estilo.css") }}">
+</head>
+</html>
+	<body>
+		<header>
+			<div class = "logotipo">
+				<img src = "{{ url_for("static", filename="logo.png") }}" width = "50" alt="logotipo">
+			</div>
+			<nav>
+				<ul> 
+					<li><a href="#">Twitter</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<section class = "main"> 
+			<section class = "articles">
+				<article>
+                {% block content %}{% endblock %}
+				</article>
+			</section>
+
+			<aside>
+				{% block aside %} {% endblock %}
+			</aside>
+		</section>
+		
+		<footer>
+            <h3>Introduccion a la Ciencia de Datos</h3>
+            <p>Oscar Bautista 20142020213 - 2020</p>
+		</footer>
+	</body>
+</html>

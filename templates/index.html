@@ -1,0 +1,33 @@
+{% extends "base_template.html" %}
+
+{% block title %}
+    Estudio Estadistico
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        Una restaurante de comidas rapidas quiere conocer la mejor forma de darse a conocer
+        mediante publicidad por lo que realiza un estudio estadistico que le permita obtener
+        inforrmacion concluyente de cuales de sus productos tienen mayor acogida en las redes.
+    </p>
+    <img src='{{ gr4 }}'alt="Img"><br>
+    <img src='{{ gr1 }}'alt="Img"><br>
+    <img src='{{ gr2 }}'alt="Img">
+    <img src='{{ gr3 }}'alt="Img">
+
+
+    
+{% endblock %}
+
+{% block aside %} 
+    <br><p>
+        Datos Estadisticos no graficos:
+    </p><br>
+
+    Moda: {{ moda }} <br>
+    Media: {{ media }} <br>
+    Mediana: {{ mediana }} <br>
+    Mediana agrupada: {{ medianaAgr }} <br>
+    Longitud media de los retwwets {{ longmedia }}
+{% endblock %}
